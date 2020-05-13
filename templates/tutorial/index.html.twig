@@ -2,11 +2,20 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>L'index</title>
+        
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <ul>
+        {% for tutorial in tutorial %}
+            <a href="{{ path('tutorial_view' , {'id' : tutorial.id}) }}">
+            
+            <li>Nom du tutorial: {{ tutorial.tutorialName }} - Date du tutorial : {{ tutorial.tutorialDate }} - Nom de m'utilisateur : {{ tutorial.tutorialUser}}</li>   
+        {% endfor %}
+
+        <a href="{{ path('tutorial_add') }}"><button>Ajouter un tutorial</button></li> 
+
+        </ul>
     </body>
 </html>
+

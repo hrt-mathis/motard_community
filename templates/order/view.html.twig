@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Affichage de la commande {{ order.orderNumber }} </title>
+        
+    </head>
+    <body>
+        
+            <h1>{{ order.orderNumber}}</h1>
+        
+            <a href="{{ path('order_edit' , {'id' : order.id}) }}"><button>Modifier la commande</button></a>
+
+            <a href="{{ path('order_delete' , {'id' : order.id}) }}"><button>Supprimer la commande</button></a>
+        
+    </body>
+</html>

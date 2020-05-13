@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ajouter un tutorial</title>
+        
+    </head>
+    <body>
+        {{ form_start(form) }}
+
+        {{ form_row(form.tutorialName) }}
+        {{ form_row(form.tutorialDate) }}
+        {{ form_row(form.tutorialUser) }}
+        
+        <button type="submit">Enregistrer</button>
+
+        {{ form_end(form) }}
+
+        {{ form_errors(form) }}
+
+        <a href="{{ path('tutorial_index') }}">Retour à l'index</a>
+        
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Nombre d'article dans le  panier : {{ cart.cartQuantity }} </title>
+        
+    </head>
+    <body>
+        
+            <h1>{{ cart.cartQuantity}}</h1>
+            <p>{{ cart.cartPrice }}</p>
+
+            <a href="{{ path('cart_edit' , {'id' : cart.id}) }}"><button>Modifier le panier</button></a>
+
+            <a href="{{ path('cart_delete' , {'id' : cart.id}) }}"><button>Supprimer le panier</button></a>
+        
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ajouter ue balade</title>
+        
+    </head>
+    <body>
+        {{ form_start(form) }}
+
+        {{ form_row(form.ridesPlanning) }}
+        {{ form_row(form.ridesDate) }}
+        {{ form_row(form.ridesName) }}
+
+        <button type="submit">Enregistrer</button>
+    
+        {{ form_end(form) }}
+
+        {{ form_errors(form) }}
+
+        <a href="{{ path('rides_index') }}">Retour à l'index</a>
+        
+    </body>
+</html>

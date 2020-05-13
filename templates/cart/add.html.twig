@@ -2,15 +2,14 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Ajouter un utilisateur</title>
+        <title>Ajouter un panier</title>
         
     </head>
     <body>
         {{ form_start(form) }}
 
-        {{ form_row(form.userName) }}
-        {{ form_row(form.userAge) }}
-        {{ form_row(form.userDescription) }}
+        {{ form_row(form.cartQuantity) }}
+        {{ form_row(form.cartPrice) }}
         
         <button type="submit">Enregistrer</button>
         
@@ -18,7 +17,7 @@
 
         {{ form_errors(form) }}
 
-        <a href="{{ path('user_index') }}">Retour à l'index</a>
+        <a href="{{ path('cart_index') }}">Retour à l'index</a>
         
     </body>
 </html>

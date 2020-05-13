@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>L'index</title>
+        
+    </head>
+    <body>
+        <ul>
+        {% for order in order %}
+            <a href="{{ path('order_view' , {'id' : order.id}) }}">
+            
+            <li>Numéro de la commande : {{ order.orderNumber}} - 
+            
+            </li>   
+        {% endfor %}
+
+        <a href="{{ path('order_add') }}"><button>Ajouter d'une commande</button></li> 
+
+        </ul>
+    </body>
+</html>

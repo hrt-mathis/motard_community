@@ -2,11 +2,20 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>L'index</title>
+        
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <ul>
+        {% for user in user %}
+            <a href="{{ path('user_view' , {'id' : user.id}) }}">
+            
+            <li>Nom : {{ user.userName }} - Description : {{ user.userDescription }} - Âge : {{ user.userAge }}</li>   
+        {% endfor %}
+
+        <a href="{{ path('user_add') }}"><button>Ajouter un utilisateur</button></li> 
+
+        </ul>
     </body>
 </html>
+

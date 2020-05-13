@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>L'index</title>
+        
+    </head>
+    <body>
+        <ul>
+        {% for cart in cart %}
+            <a href="{{ path('cart_view' , {'id' : cart.id}) }}">
+            
+            <li>Prix du panier : {{ cart.cartPrice }} - Quantité dans le panier : {{ cart.cartQuantity }}</li>   
+        {% endfor %}
+
+        <a href="{{ path('cart_add') }}"><button>Ajouter un article</button></li> 
+
+        </ul>
+    </body>
+</html>
+

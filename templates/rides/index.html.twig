@@ -2,11 +2,19 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>L'index</title>
+        
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <ul>
+        {% for rides in rides %}
+            <a href="{{ path('rides_view' , {'id' : rides.id}) }}">
+            
+            <li>Planning des balades : {{ rides.ridesPlanning}} - Date de la balade : {{ rides.ridesDate }} - Nom de la balade : {{ rides.ridesName }}</li>   
+        {% endfor %}
+
+        <a href="{{ path('rides_add') }}"><button>Ajouter une balade</button></li> 
+
+        </ul>
     </body>
 </html>

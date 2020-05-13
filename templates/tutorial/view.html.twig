@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Affichage du tutorial {{ tutorial.tutorialName }} </title>
+        
+    </head>
+    <body>
+        
+            <h1>{{ tutorial.tutorialName }}</h1>
+            <p>{{ tutorial.tutorialDate}}</p>
+            <p>{{ tutorial.tutorialUser}}</p>
+            
+            
+            <a href="{{ path('tutorial_edit' , {'id' : tutorial.id}) }}"><button>Modifier le tutorial</button></a>
+
+            <a href="{{ path('tutorial_delete' , {'id' : tutorial.id}) }}"><button>Supprimer le tutorial</button></a>
+        
+    </body>
+</html>

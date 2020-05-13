@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ajouter un évènement</title>
+        
+    </head>
+    <body>
+        {{ form_start(form) }}
+
+        {{ form_row(form.eventDate) }}
+        {{ form_row(form.eventName) }}
+        
+        <button type="submit">Enregistrer</button>
+        
+        {{ form_end(form) }}
+
+        {{ form_errors(form) }}
+
+        <a href="{{ path('event_index') }}">Retour à l'index</a>
+        
+    </body>
+</html>

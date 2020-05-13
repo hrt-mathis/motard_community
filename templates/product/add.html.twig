@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ajouter un produit</title>
+        
+    </head>
+    <body>
+        {{ form_start(form) }}
+
+        {{ form_row(form.productName) }}
+        {{ form_row(form.productPicture) }}
+        {{ form_row(form.productPrice) }}
+        {{ form_row(form.productDescription) }}
+        {{ form_row(form.productColor) }}
+        {{ form_row(form.productSize) }}
+        
+        <button type="submit">Enregistrer</button>
+        
+        {{ form_end(form) }}
+
+        {{ form_errors(form) }}
+
+        <a href="{{ path('product_index') }}">Retour à l'index</a>
+        
+    </body>
+</html>

@@ -2,11 +2,25 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>L'index</title>
+        
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <ul>
+        {% for location in location %}
+            <a href="{{ path('location_view' , {'id' : location.id}) }}">
+            
+            <li>Nom de l'itineraire : {{ location.locationName}} - 
+            Point de l'itineraire : {{ location.locationPoint }} - 
+            Distance de l'itineraire : {{ location.locationDistance }} - 
+            Pays de l'itineraire : {{ location.locationCountry }} -
+            Parcours de l'itineraire : {{ location.locationItinerary }} -
+            </li>   
+        {% endfor %}
+
+        <a href="{{ path('location_add') }}"><button>Ajouter un itineraire</button></li> 
+
+        </ul>
     </body>
 </html>
+

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Affichage de l'évènement {{ event.eventName }} </title>
+        
+    </head>
+    <body>
+        
+            <h1>{{ event.eventName}}</h1>
+            <p>{{ event.eventDate }}</p>
+
+            <a href="{{ path('event_edit' , {'id' : event.id}) }}"><button>Modifier l'évènement</button></a>
+
+            <a href="{{ path('event_delete' , {'id' : event.id}) }}"><button>Supprimer l'évènement</button></a>
+        
+    </body>
+</html>

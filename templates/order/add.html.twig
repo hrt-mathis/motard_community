@@ -2,23 +2,21 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Ajouter un utilisateur</title>
+        <title>Ajouter une commande</title>
         
     </head>
     <body>
         {{ form_start(form) }}
 
-        {{ form_row(form.userName) }}
-        {{ form_row(form.userAge) }}
-        {{ form_row(form.userDescription) }}
-        
+        {{ form_row(form.orderNumber) }}
+
         <button type="submit">Enregistrer</button>
-        
+    
         {{ form_end(form) }}
 
         {{ form_errors(form) }}
 
-        <a href="{{ path('user_index') }}">Retour à l'index</a>
+        <a href="{{ path('order_index') }}">Retour à l'index</a>
         
     </body>
 </html>

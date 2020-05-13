@@ -2,11 +2,20 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>L'index</title>
+        
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <ul>
+        {% for event in event %}
+            <a href="{{ path('event_view' , {'id' : event.id}) }}">
+            
+            <li>Nom de l'évènement : {{ event.eventName }} - Date de l'évènement : {{ event.eventDate }}</li>   
+        {% endfor %}
+
+        <a href="{{ path('event_add') }}"><button>Ajouter un utilisateur</button></li> 
+
+        </ul>
     </body>
 </html>
+

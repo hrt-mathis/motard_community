@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Affichage de l'utilisateur {{ user.userName }} </title>
+        
+    </head>
+    <body>
+        
+            <h1>{{ user.userName }}</h1>
+            <p>{{ user.userAge}}</p>
+            <p>{{ user.userDescription}}</p>
+            
+            
+            <a href="{{ path('user_edit' , {'id' : user.id}) }}"><button>Modifier l'utilisateur</button></a>
+
+            <a href="{{ path('user_delete' , {'id' : user.id}) }}"><button>Supprimer l'utilisateur</button></a>
+        
+    </body>
+</html>

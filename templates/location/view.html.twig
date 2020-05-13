@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Affichage de l'itineraire {{ location.locationName }} </title>
+        
+    </head>
+    <body>
+        
+            <h1>{{ location.locationName}}</h1>
+            <p>{{ location.locationPoint }}</p>
+            <p>{{ location.locationDistance }}</p>
+            <p>{{ location.locationCountry }}</p>
+            <p>{{ location.locationItinerary }}</p>
+            
+            
+            <a href="{{ path('location_edit' , {'id' : location.id}) }}"><button>Modifier l'itineraire</button></a>
+
+            <a href="{{ path('location_delete' , {'id' : location.id}) }}"><button>Supprimer l'itineraire</button></a>
+        
+    </body>
+</html>
